@@ -25,6 +25,10 @@ class ClienteController extends Controller
         return $cliente;
     }
 
+    public function jsonClientes(){
+        $clientes = ClienteController::consulta();
+        return response()->json($clientes);
+    }
     public function createCliente(Request $request){
 
 

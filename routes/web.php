@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClienteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/cliente',  [ClienteController::class, 'jsonClientes']);
+Route::post('/cliente', [ClienteController::class, 'createCliente']);
+Route::put('/cliente', [ClienteController::class, 'updateCliente']);
+Route::delete('/cliente', [ClienteController::class, 'deleteCliente']);
