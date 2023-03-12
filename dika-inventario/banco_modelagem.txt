@@ -1,0 +1,15 @@
+clientes
+id
+nome
+telefone
+qnt_itens_variados = quantidade de ids existentes na tabela de compras com a o id do cliente relacionado
+
+item
+id
+nome
+preço
+
+compras
+id
+id_cliente
+id_item
